@@ -15,13 +15,20 @@ authForm.onsubmit = function (event){
             })
     }
 }
-
+//Função que centraliza e trata autenticação
 firebase.auth().onAuthStateChanged( function (user){
     hideItem(loading)
     if (user) {
-        console.log('Usuario AUTENTICADO')
-        console.log(user)
+        showUserContent(user)
     } else {
-        console.log('Usuario não Autenticado')
+        showAuth()
     }
 })
+
+// Função que permitir o usuario sair da conta
+function signOut() {
+firebase.auth().signOut().catch(function (error) {
+    console.log('Falha ao sair da conta')
+    console.log(error)
+    })
+}

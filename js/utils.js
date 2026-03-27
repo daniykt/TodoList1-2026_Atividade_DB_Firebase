@@ -6,6 +6,10 @@ var access = document.getElementById('access')
 
 var loading = document.getElementById('loading')
 
+var auth = document.getElementById('auth')
+var userContent = document.getElementById('userContent')
+var userEmail = document.getElementById('userEmail')
+
 // Alterar o formulário de autenticação para o cadastro de novas contas
 function toggleToRegister() {
   authForm.submitAuthForm.innerHTML = 'Cadastrar conta'
@@ -22,12 +26,26 @@ function toggleToAccess() {
   showItem(register)
 }
 
-// Simpplifica a exibição de elementos da página
+// Simplifica a exibição de elementos da página
 function showItem(element) {
   element.style.display = 'block'
 }
 
-// Simpplifica a remoção de elementos da página
+// Simplifica a remoção de elementos da página
 function hideItem(element) {
   element.style.display = 'none'
+}
+
+//Mostrar o conteúdo  para usuario autenticado
+function showUserContent(user) {
+  userEmail.innerHTML = user.email
+  hideItem(auth)
+  showItem(userContent)
+}
+//Mostrar o conteúdo  para usuario NÂO autenticado
+function showAuth() {
+  authForm.email.value = ''
+  authForm.password.value = ''
+  hideItem(userContent)
+  showItem(auth)
 }
