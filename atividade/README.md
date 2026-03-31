@@ -1,18 +1,91 @@
-# React + Vite
+# 🔐 TodoList — Firebase Authentication
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Descrição do Projeto
 
-Currently, two official plugins are available:
+Esta aplicação foi desenvolvida como parte da atividade prática de **Firebase Authentication**, com o objetivo de implementar um sistema completo de autenticação de usuários em uma aplicação web.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A aplicação permite:
 
-## React Compiler
+- Cadastro de usuários com e-mail e senha  
+- Login de usuários cadastrados  
+- Persistência da sessão após recarregar a página  
+- Interface dinâmica baseada no estado de autenticação  
+- Tratamento de erros com mensagens amigáveis  
+- Logout do usuário  
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 🚀 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- ⚛️ React + Vite  
+- 🔥 Firebase Authentication  
+- 🟨 JavaScript (ES6+)  
+- 🎨 CSS  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ Funcionalidades Implementadas
+
+### 🔹 Cadastro de Usuário
+- Formulário com:
+  - Email
+  - Senha
+- Integração com Firebase Authentication
+- Tratamento de erros:
+  - Senha fraca
+  - Email inválido
+
+### 🔹 Login
+- Formulário de autenticação
+- Validação com Firebase
+- Feedback de sucesso ou erro
+
+### 🔹 Gerenciamento de Sessão
+- Uso de `onAuthStateChanged`
+- Persistência de login após reload
+
+### 🔹 Loading (UX)
+- Exibição de loading durante:
+  - Verificação de autenticação
+  - Login e cadastro
+
+### 🔹 Interface Dinâmica
+- **Não autenticado:**
+  - Exibe tela de login/cadastro  
+
+- **Autenticado:**
+  - Exibe email do usuário  
+  - Botão de logout  
+
+### 🔹 Logout
+- Encerramento da sessão via Firebase
+
+---
+
+## 📸 Prints da Aplicação
+
+### 🔐 Tela de Login
+![Tela de Login](./login.png)
+
+### 📝 Tela de Cadastro
+![Tela de Cadastro](./register.png)
+
+### ✅ Usuário Autenticado
+![Usuário autenticado](./loggedin.png)
+
+---
+
+## ▶️ Como Executar o Projeto
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
+
+# Acesse a pasta
+cd seu-repositorio
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
+npm run dev
