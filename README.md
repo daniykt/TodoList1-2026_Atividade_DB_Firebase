@@ -65,13 +65,13 @@ A aplicação permite:
 ## 📸 Prints da Aplicação
 
 ### 🔐 Tela de Login
-![Tela de Login](./login.png)
+![Tela de Login](readme/login.png)
 
 ### 📝 Tela de Cadastro
-![Tela de Cadastro](./register.png)
+![Tela de Cadastro](readme/cadastro.png)
 
 ### ✅ Usuário Autenticado
-![Usuário autenticado](./loggedin.png)
+![Usuário autenticado](readme/logout.png)
 
 ---
 
