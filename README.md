@@ -79,13 +79,13 @@ A aplicação permite:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
-
-# Acesse a pasta
-cd seu-repositorio
+git clone https://github.com/daniykt/TodoList1-2026_Atividade_DB_Firebase/tree/Atividade-Danilo
 
 # Instale as dependências
 npm install
+
+# Instale o firebase
+npm install firebase
 
 # Execute o projeto
 npm run dev
